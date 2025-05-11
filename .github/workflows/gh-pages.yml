@@ -26,22 +26,6 @@ jobs:
       - name: Build
         run: hugo --minify
 
-      - name: Copy
-        run: |
-          # Checkout gh-pages branch (or create it if it doesn't exist)
-          git fetch origin gh-pages || git checkout --orphan gh-pages
-          
-          # Remove all files in the gh-pages branch (except the .git folder)
-          git rm -rf .
-          
-          # Copy the contents of the public folder to the gh-pages branch
-          cp -a public/. .
-          
-          # Commit and push the changes to gh-pages
-          git add .
-          git commit -m "Deploy Hugo site to GitHub Pages"
-          git push origin gh-pages --force
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/master'
