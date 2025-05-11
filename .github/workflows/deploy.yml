@@ -1,34 +1,38 @@
 # This is a basic workflow to build the Hugo site
 
-name: github pages
+name: GitHub Pages
 
 on:
   push:
     branches:
       - master  # Set a branch to deploy
-  pull_request:
 
 jobs:
   deploy:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      # Checkout the repository and fetch submodules if applicable
+      - name: Checkout code
+        uses: actions/checkout@v2
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
+      # Setup Hugo (Latest version, extended for full support)
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
-          # extended: true
+          extended: true
 
-      - name: Build
+      # Build the site with Hugo (minified)
+      - name: Build the site
         run: hugo --minify
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/master'
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./public  # The directory to deploy (Hugo generates this)
