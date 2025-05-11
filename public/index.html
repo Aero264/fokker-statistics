@@ -1,0 +1,979 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"
+><head>
+	<meta name="generator" content="Hugo 0.147.2">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>Fokker Statistics</title>
+    <meta name="title" content="Fokker Statistics" />
+  
+  
+  
+  
+  
+  <script src="/js/sorttable.js"></script>
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.b6206ee38db824d1e5f12a29a056ab44627150d6f710f508456de1262cf14388.css"
+    integrity="sha256-tiBu4424JNHl8SopoFarRGJxUNb3EPUIRW3hJizxQ4g="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      Statistics from the Gameworld Fokker in AirlineSim
+    "
+  />
+  
+  
+  
+  <link rel="canonical" href="https://example.org/" />
+  <link rel="alternate" type="application/rss+xml" href="/index.xml" title="Fokker Statistics" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="https://example.org/">
+  <meta property="og:site_name" content="Fokker Statistics">
+  <meta property="og:title" content="Welcome to Fokker statistics!">
+  <meta property="og:description" content="Statistics from the Gameworld Fokker in AirlineSim">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Welcome to Fokker statistics!">
+  <meta name="twitter:description" content="Statistics from the Gameworld Fokker in AirlineSim">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https:\/\/example.org\/",
+    "name": "Fokker Statistics",
+    
+    "inLanguage": "en-us",
+    "url": "https:\/\/example.org\/",
+    
+    "publisher" : {
+      "@type": "Person",
+      "name": ""
+    }
+  }
+  </script>
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >Fokker Statistics</a
+  >
+
+    </div>
+    
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  
+  
+    <article class="prose max-w-full dark:prose-invert">
+  
+    <header>
+      <h1>Welcome to Fokker statistics!</h1>
+    </header>
+  
+  <section><p>This website shows the weekly statistics from the Private Gameworld Fokker from AirlineSim. <a href="https://www.airlinesim.aero/en" target="_blank" rel="noreferrer">AirlineSim</a> is a realistic airline simulation game that includes various aspects of flight planning such as fleet management, route evaluation and scheduling and maintaining connections at key hubs - all supported by real-world demand and real-time simulation. Fokker is a private server that hosts AirlineSim, visit us <a href="https://www.fokker.airlinesim.aero/en" target="_blank" rel="noreferrer">here</a>.</p>
+<h2 id="visualization-of-last-weeks-statistics" class="relative group">Visualization of last week&rsquo;s statistics <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#visualization-of-last-weeks-statistics" aria-label="Anchor">#</a></span></h2><h3 id="available-seat-kilometres-askm-vs-passengers-carried" class="relative group">Available seat kilometres (ASKM) vs Passengers carried <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#available-seat-kilometres-askm-vs-passengers-carried" aria-label="Anchor">#</a></span></h3><p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/images/askm_v_pax.png" alt="Bubble Plot of ASKM vs Passengers carried" class="mx-auto my-0 rounded-md" />
+</figure>
+
+ASKM is the number of seats offered per flight multiplied by the flight distance and summed up over all flights. Your revenue depends on both the number of passengers transported and how far you have transported them. As such, ASKM is a better indicator of revenue compared to passengers carried.</p>
+<p>The above plot of ASKM vs Passengers carried helps ascertain the average stage length of different airlines. For example, US based airlines have higher ASKM than their European counterparts as the average intra-european flight is much shorter than its US counterpart. Airlines make money when their planes are in the air. Hence, a plane deployed on a long-haul flight would make more money than a similar plane deployed on multiple short haul flights due to the impact of ground handling, with all other factors such as loads and profit margins being equal.</p>
+<p>Note that the number of flights includes both passenger and cargo-only flights. Hence, ASKM is plotted against passengers carried (instead of the number of flights) for an unbiased picture of stage length.</p>
+<h3 id="available-freight-kilometres-afkm-vs-cargo-carried" class="relative group">Available freight kilometres (AFKM) vs Cargo carried <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#available-freight-kilometres-afkm-vs-cargo-carried" aria-label="Anchor">#</a></span></h3><p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/images/afkm_v_cargo.png" alt="Bubble Plot of AFKM vs Cargo carried" class="mx-auto my-0 rounded-md" />
+</figure>
+
+AFKM is the cargo equivalent of ASKM and the same logic applies here.</p>
+<h3 id="statistics" class="relative group">Statistics <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#statistics" aria-label="Anchor">#</a></span></h3><p>Here are the statistics from last week presented in a sortable format. Just click on the column header to sort:
+
+
+
+<table border="1" class="dataframe sortable">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Airline_name</th>
+      <th>Code</th>
+      <th>ASKM</th>
+      <th>AFKM</th>
+      <th>Flights</th>
+      <th>Pax_carried</th>
+      <th>Pax_capacity</th>
+      <th>Cargo_carried</th>
+      <th>Cargo_capacity</th>
+      <th>Pax_LF</th>
+      <th>Cargo_LF</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Air France</td>
+      <td>AF</td>
+      <td>277688896</td>
+      <td>66684468</td>
+      <td>1175</td>
+      <td>232671</td>
+      <td>237576</td>
+      <td>33417</td>
+      <td>38614</td>
+      <td>0.979354</td>
+      <td>0.865412</td>
+    </tr>
+    <tr>
+      <td>United Airlines</td>
+      <td>UA</td>
+      <td>233643094</td>
+      <td>39593422</td>
+      <td>1014</td>
+      <td>167833</td>
+      <td>172740</td>
+      <td>21176</td>
+      <td>28902</td>
+      <td>0.971593</td>
+      <td>0.732683</td>
+    </tr>
+    <tr>
+      <td>Cathay Pacific</td>
+      <td>CX</td>
+      <td>237492516</td>
+      <td>34983888</td>
+      <td>683</td>
+      <td>134639</td>
+      <td>139332</td>
+      <td>19101</td>
+      <td>20616</td>
+      <td>0.966318</td>
+      <td>0.926513</td>
+    </tr>
+    <tr>
+      <td>Garuda Indonesia</td>
+      <td>GA</td>
+      <td>311720568</td>
+      <td>46020618</td>
+      <td>1332</td>
+      <td>269075</td>
+      <td>271728</td>
+      <td>36097</td>
+      <td>40680</td>
+      <td>0.990237</td>
+      <td>0.887340</td>
+    </tr>
+    <tr>
+      <td>Turkish Airlines</td>
+      <td>TK</td>
+      <td>300890124</td>
+      <td>44396064</td>
+      <td>1312</td>
+      <td>224659</td>
+      <td>232872</td>
+      <td>33400</td>
+      <td>34392</td>
+      <td>0.964732</td>
+      <td>0.971156</td>
+    </tr>
+    <tr>
+      <td>Lufthansa</td>
+      <td>LH</td>
+      <td>232694234</td>
+      <td>39227585</td>
+      <td>1069</td>
+      <td>187257</td>
+      <td>203774</td>
+      <td>12407</td>
+      <td>17851</td>
+      <td>0.918945</td>
+      <td>0.695031</td>
+    </tr>
+    <tr>
+      <td>Delta Air Lines</td>
+      <td>DL</td>
+      <td>403556063</td>
+      <td>64692645</td>
+      <td>1420</td>
+      <td>216466</td>
+      <td>228229</td>
+      <td>22488</td>
+      <td>29119</td>
+      <td>0.948460</td>
+      <td>0.772279</td>
+    </tr>
+    <tr>
+      <td>Pegasus Airlines</td>
+      <td>PC</td>
+      <td>272040860</td>
+      <td>69108606</td>
+      <td>1428</td>
+      <td>150638</td>
+      <td>166852</td>
+      <td>30278</td>
+      <td>41272</td>
+      <td>0.902824</td>
+      <td>0.733621</td>
+    </tr>
+    <tr>
+      <td>LATAM Airlines Brasil</td>
+      <td>JJ</td>
+      <td>272910547</td>
+      <td>57266054</td>
+      <td>1583</td>
+      <td>230176</td>
+      <td>233003</td>
+      <td>19278</td>
+      <td>45872</td>
+      <td>0.987867</td>
+      <td>0.420256</td>
+    </tr>
+    <tr>
+      <td>DragonAir</td>
+      <td>DR</td>
+      <td>370090219</td>
+      <td>46506220</td>
+      <td>1613</td>
+      <td>282058</td>
+      <td>282962</td>
+      <td>32351</td>
+      <td>34206</td>
+      <td>0.996805</td>
+      <td>0.945770</td>
+    </tr>
+    <tr>
+      <td>Continental Airlines</td>
+      <td>CO</td>
+      <td>448990768</td>
+      <td>105650760</td>
+      <td>1392</td>
+      <td>253593</td>
+      <td>253787</td>
+      <td>44884</td>
+      <td>50660</td>
+      <td>0.999236</td>
+      <td>0.885985</td>
+    </tr>
+    <tr>
+      <td>American Airlines</td>
+      <td>AA</td>
+      <td>489167352</td>
+      <td>75455932</td>
+      <td>1892</td>
+      <td>309185</td>
+      <td>316826</td>
+      <td>45194</td>
+      <td>50368</td>
+      <td>0.975883</td>
+      <td>0.897276</td>
+    </tr>
+    <tr>
+      <td>China Southern Airlines</td>
+      <td>CZ</td>
+      <td>433869958</td>
+      <td>67183084</td>
+      <td>1891</td>
+      <td>304889</td>
+      <td>314455</td>
+      <td>43958</td>
+      <td>49882</td>
+      <td>0.969579</td>
+      <td>0.881240</td>
+    </tr>
+    <tr>
+      <td>Dimension Aviation</td>
+      <td>DIM</td>
+      <td>233082780</td>
+      <td>33823109</td>
+      <td>598</td>
+      <td>105481</td>
+      <td>105630</td>
+      <td>15632</td>
+      <td>17311</td>
+      <td>0.998589</td>
+      <td>0.903010</td>
+    </tr>
+    <tr>
+      <td>Dimension Aero</td>
+      <td>DA</td>
+      <td>122363472</td>
+      <td>12083232</td>
+      <td>826</td>
+      <td>115467</td>
+      <td>133896</td>
+      <td>9400</td>
+      <td>15960</td>
+      <td>0.862363</td>
+      <td>0.588972</td>
+    </tr>
+    <tr>
+      <td>Alitalia</td>
+      <td>AZ</td>
+      <td>346489584</td>
+      <td>55717662</td>
+      <td>1862</td>
+      <td>199309</td>
+      <td>227094</td>
+      <td>573</td>
+      <td>7686</td>
+      <td>0.877650</td>
+      <td>0.074551</td>
+    </tr>
+    <tr>
+      <td>Air New Zealand</td>
+      <td>NZ</td>
+      <td>321330730</td>
+      <td>105277616</td>
+      <td>642</td>
+      <td>75879</td>
+      <td>94498</td>
+      <td>6595</td>
+      <td>16038</td>
+      <td>0.802969</td>
+      <td>0.411211</td>
+    </tr>
+    <tr>
+      <td>British Airways</td>
+      <td>BA</td>
+      <td>282371424</td>
+      <td>29286266</td>
+      <td>1169</td>
+      <td>183154</td>
+      <td>200536</td>
+      <td>13013</td>
+      <td>22008</td>
+      <td>0.913322</td>
+      <td>0.591285</td>
+    </tr>
+    <tr>
+      <td>Emirates</td>
+      <td>EK</td>
+      <td>340706810</td>
+      <td>225717654</td>
+      <td>260</td>
+      <td>85362</td>
+      <td>93080</td>
+      <td>44136</td>
+      <td>65532</td>
+      <td>0.917082</td>
+      <td>0.673503</td>
+    </tr>
+    <tr>
+      <td>Qantas</td>
+      <td>QA</td>
+      <td>365414324</td>
+      <td>106557430</td>
+      <td>937</td>
+      <td>137193</td>
+      <td>146876</td>
+      <td>12012</td>
+      <td>26332</td>
+      <td>0.934074</td>
+      <td>0.456175</td>
+    </tr>
+    <tr>
+      <td>Ukraine International Airlines</td>
+      <td>PS</td>
+      <td>349267291</td>
+      <td>77580043</td>
+      <td>1978</td>
+      <td>214097</td>
+      <td>216336</td>
+      <td>36276</td>
+      <td>46556</td>
+      <td>0.989650</td>
+      <td>0.779191</td>
+    </tr>
+    <tr>
+      <td>Korean Air</td>
+      <td>KE</td>
+      <td>285258320</td>
+      <td>29187566</td>
+      <td>1102</td>
+      <td>190419</td>
+      <td>193260</td>
+      <td>21049</td>
+      <td>21382</td>
+      <td>0.985300</td>
+      <td>0.984426</td>
+    </tr>
+    <tr>
+      <td>Air India</td>
+      <td>AI</td>
+      <td>377096432</td>
+      <td>36076798</td>
+      <td>1318</td>
+      <td>245025</td>
+      <td>245885</td>
+      <td>22538</td>
+      <td>23273</td>
+      <td>0.996502</td>
+      <td>0.968418</td>
+    </tr>
+    <tr>
+      <td>China Eastern Airlines</td>
+      <td>MU</td>
+      <td>318818616</td>
+      <td>56448394</td>
+      <td>1611</td>
+      <td>265634</td>
+      <td>266826</td>
+      <td>44742</td>
+      <td>47185</td>
+      <td>0.995533</td>
+      <td>0.948225</td>
+    </tr>
+    <tr>
+      <td>Riverland Airlines</td>
+      <td>RI</td>
+      <td>307641928</td>
+      <td>86378478</td>
+      <td>1070</td>
+      <td>161084</td>
+      <td>172968</td>
+      <td>32492</td>
+      <td>48538</td>
+      <td>0.931294</td>
+      <td>0.669414</td>
+    </tr>
+    <tr>
+      <td>Newark Airline</td>
+      <td>NWA</td>
+      <td>189823524</td>
+      <td>19668376</td>
+      <td>614</td>
+      <td>95158</td>
+      <td>104092</td>
+      <td>10416</td>
+      <td>12572</td>
+      <td>0.914172</td>
+      <td>0.828508</td>
+    </tr>
+    <tr>
+      <td>FedEx Express</td>
+      <td>FE</td>
+      <td>0</td>
+      <td>538721502</td>
+      <td>362</td>
+      <td>0</td>
+      <td>0</td>
+      <td>159957</td>
+      <td>183172</td>
+      <td>NaN</td>
+      <td>0.873261</td>
+    </tr>
+    <tr>
+      <td>Liberty Airlines</td>
+      <td>LA</td>
+      <td>443020940</td>
+      <td>168593359</td>
+      <td>918</td>
+      <td>172384</td>
+      <td>173927</td>
+      <td>43608</td>
+      <td>48995</td>
+      <td>0.991128</td>
+      <td>0.890050</td>
+    </tr>
+    <tr>
+      <td>Yokoso Air</td>
+      <td>YA</td>
+      <td>254177337</td>
+      <td>129833726</td>
+      <td>476</td>
+      <td>103067</td>
+      <td>103684</td>
+      <td>32046</td>
+      <td>36612</td>
+      <td>0.994049</td>
+      <td>0.875287</td>
+    </tr>
+    <tr>
+      <td>SF Airlines</td>
+      <td>O3</td>
+      <td>0</td>
+      <td>533420646</td>
+      <td>311</td>
+      <td>0</td>
+      <td>0</td>
+      <td>129136</td>
+      <td>157366</td>
+      <td>NaN</td>
+      <td>0.820609</td>
+    </tr>
+    <tr>
+      <td>All Nippon Airways</td>
+      <td>NH</td>
+      <td>198561096</td>
+      <td>23274578</td>
+      <td>1150</td>
+      <td>156265</td>
+      <td>170004</td>
+      <td>11682</td>
+      <td>20206</td>
+      <td>0.919184</td>
+      <td>0.578145</td>
+    </tr>
+    <tr>
+      <td>Qatar Airways</td>
+      <td>QR</td>
+      <td>223164718</td>
+      <td>44688112</td>
+      <td>924</td>
+      <td>111078</td>
+      <td>127302</td>
+      <td>21123</td>
+      <td>26712</td>
+      <td>0.872555</td>
+      <td>0.790768</td>
+    </tr>
+    <tr>
+      <td>US Airways</td>
+      <td>US</td>
+      <td>243171581</td>
+      <td>87204723</td>
+      <td>775</td>
+      <td>117180</td>
+      <td>129113</td>
+      <td>35289</td>
+      <td>43709</td>
+      <td>0.907577</td>
+      <td>0.807362</td>
+    </tr>
+    <tr>
+      <td>LAN PERU</td>
+      <td>LP</td>
+      <td>135713963</td>
+      <td>0</td>
+      <td>397</td>
+      <td>42890</td>
+      <td>48037</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.892853</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Iberia</td>
+      <td>IB</td>
+      <td>112632768</td>
+      <td>16686336</td>
+      <td>618</td>
+      <td>99876</td>
+      <td>100116</td>
+      <td>11860</td>
+      <td>14832</td>
+      <td>0.997603</td>
+      <td>0.799622</td>
+    </tr>
+    <tr>
+      <td>Sverige Flyg</td>
+      <td>SVF</td>
+      <td>67148456</td>
+      <td>22680594</td>
+      <td>482</td>
+      <td>46988</td>
+      <td>55912</td>
+      <td>7470</td>
+      <td>19062</td>
+      <td>0.840392</td>
+      <td>0.391879</td>
+    </tr>
+    <tr>
+      <td>TACA International Airlines</td>
+      <td>TAI</td>
+      <td>62697900</td>
+      <td>14023588</td>
+      <td>396</td>
+      <td>41296</td>
+      <td>45352</td>
+      <td>7315</td>
+      <td>10848</td>
+      <td>0.910566</td>
+      <td>0.674318</td>
+    </tr>
+    <tr>
+      <td>Royal Jordanian Cargo</td>
+      <td>RJ</td>
+      <td>0</td>
+      <td>123795512</td>
+      <td>96</td>
+      <td>0</td>
+      <td>0</td>
+      <td>25798</td>
+      <td>38208</td>
+      <td>NaN</td>
+      <td>0.675199</td>
+    </tr>
+    <tr>
+      <td>Air Peace</td>
+      <td>P4</td>
+      <td>46112048</td>
+      <td>12856952</td>
+      <td>290</td>
+      <td>27821</td>
+      <td>32796</td>
+      <td>3714</td>
+      <td>8558</td>
+      <td>0.848305</td>
+      <td>0.433980</td>
+    </tr>
+    <tr>
+      <td>Air Astana</td>
+      <td>KC</td>
+      <td>44630964</td>
+      <td>7286688</td>
+      <td>232</td>
+      <td>20587</td>
+      <td>34104</td>
+      <td>1268</td>
+      <td>5568</td>
+      <td>0.603654</td>
+      <td>0.227730</td>
+    </tr>
+    <tr>
+      <td>Kenya Airways</td>
+      <td>KQ</td>
+      <td>45147840</td>
+      <td>8866092</td>
+      <td>438</td>
+      <td>36632</td>
+      <td>42048</td>
+      <td>6474</td>
+      <td>8318</td>
+      <td>0.871195</td>
+      <td>0.778312</td>
+    </tr>
+    <tr>
+      <td>Alpine Aviation Holding</td>
+      <td>ALP</td>
+      <td>178874625</td>
+      <td>96345152</td>
+      <td>702</td>
+      <td>89718</td>
+      <td>95316</td>
+      <td>19220</td>
+      <td>27366</td>
+      <td>0.941269</td>
+      <td>0.702331</td>
+    </tr>
+    <tr>
+      <td>Air Algerie</td>
+      <td>AH</td>
+      <td>36731918</td>
+      <td>5714672</td>
+      <td>283</td>
+      <td>30038</td>
+      <td>34420</td>
+      <td>2517</td>
+      <td>5582</td>
+      <td>0.872690</td>
+      <td>0.450914</td>
+    </tr>
+    <tr>
+      <td>Dimension Aerotecnica</td>
+      <td>DAT</td>
+      <td>25340104</td>
+      <td>4684967</td>
+      <td>351</td>
+      <td>15577</td>
+      <td>22436</td>
+      <td>282</td>
+      <td>1908</td>
+      <td>0.694286</td>
+      <td>0.147799</td>
+    </tr>
+    <tr>
+      <td>Pakistan International Airlines</td>
+      <td>PK</td>
+      <td>60482424</td>
+      <td>13510524</td>
+      <td>354</td>
+      <td>31483</td>
+      <td>32824</td>
+      <td>5409</td>
+      <td>6736</td>
+      <td>0.959146</td>
+      <td>0.802999</td>
+    </tr>
+    <tr>
+      <td>Pacifica Airlines</td>
+      <td>PA</td>
+      <td>156041342</td>
+      <td>40787221</td>
+      <td>335</td>
+      <td>47989</td>
+      <td>52086</td>
+      <td>10460</td>
+      <td>12770</td>
+      <td>0.921342</td>
+      <td>0.819107</td>
+    </tr>
+    <tr>
+      <td>Ethiopian Airlines</td>
+      <td>ET</td>
+      <td>64673787</td>
+      <td>15425199</td>
+      <td>215</td>
+      <td>20603</td>
+      <td>24777</td>
+      <td>3363</td>
+      <td>5167</td>
+      <td>0.831537</td>
+      <td>0.650861</td>
+    </tr>
+    <tr>
+      <td>African Airlines</td>
+      <td>AFN</td>
+      <td>61219864</td>
+      <td>11071214</td>
+      <td>396</td>
+      <td>45772</td>
+      <td>47424</td>
+      <td>4596</td>
+      <td>7306</td>
+      <td>0.965165</td>
+      <td>0.629072</td>
+    </tr>
+    <tr>
+      <td>Air Cambodia</td>
+      <td>AC</td>
+      <td>43081402</td>
+      <td>1775564</td>
+      <td>294</td>
+      <td>24114</td>
+      <td>31136</td>
+      <td>520</td>
+      <td>1708</td>
+      <td>0.774473</td>
+      <td>0.304450</td>
+    </tr>
+    <tr>
+      <td>Twiga Airlines</td>
+      <td>TWA</td>
+      <td>1101716</td>
+      <td>247940</td>
+      <td>56</td>
+      <td>1788</td>
+      <td>2996</td>
+      <td>336</td>
+      <td>644</td>
+      <td>0.596796</td>
+      <td>0.521739</td>
+    </tr>
+    <tr>
+      <td>PLL LOT</td>
+      <td>LO</td>
+      <td>141172878</td>
+      <td>85258056</td>
+      <td>848</td>
+      <td>95599</td>
+      <td>107006</td>
+      <td>25589</td>
+      <td>40914</td>
+      <td>0.893399</td>
+      <td>0.625434</td>
+    </tr>
+    <tr>
+      <td>DrakeAir</td>
+      <td>DRH</td>
+      <td>146955530</td>
+      <td>73636622</td>
+      <td>524</td>
+      <td>70554</td>
+      <td>76030</td>
+      <td>18091</td>
+      <td>26014</td>
+      <td>0.927976</td>
+      <td>0.695433</td>
+    </tr>
+    <tr>
+      <td>Aurora</td>
+      <td>A0</td>
+      <td>38222304</td>
+      <td>22078560</td>
+      <td>60</td>
+      <td>4623</td>
+      <td>8658</td>
+      <td>358</td>
+      <td>5040</td>
+      <td>0.533957</td>
+      <td>0.071032</td>
+    </tr>
+  </tbody>
+</table>
+</p>
+</section>
+</article>
+<section>
+  
+
+</section>
+
+  
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2025
+            
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>
