@@ -1,5 +1,7 @@
 # This is a basic workflow to build the Hugo site
 
+# This is a basic workflow to build the Hugo site
+
 name: github pages
 
 on:
