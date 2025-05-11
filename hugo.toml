@@ -1,4 +1,3 @@
-baseURL = 'https://Aero264.github.io/fokker-statistics/'
 languageCode = 'en-us'
 title = 'Fokker Statistics'
 theme = 'congo'
