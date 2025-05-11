@@ -1,15 +1,14 @@
-# This is a basic workflow to build the Hugo site
-
 name: GitHub Pages
 
 on:
   push:
     branches:
-      - master  # Set a branch to deploy
+      - main  # Deploy when the main branch is updated
 
 jobs:
   deploy:
     runs-on: ubuntu-20.04
+
     steps:
       # Checkout the repository and fetch submodules if applicable
       - name: Checkout code
@@ -29,10 +28,23 @@ jobs:
       - name: Build the site
         run: hugo --minify
 
-      # Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/master'
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public  # The directory to deploy (Hugo generates this)
+      # Deploy the public folder to the gh-pages branch
+      - name: Deploy to gh-pages from public folder
+        if: github.ref == 'refs/heads/main'
+        run: |
+          # Checkout gh-pages branch (or create it if it doesn't exist)
+          git fetch origin gh-pages || git checkout --orphan gh-pages
+          
+          # Remove all files in the gh-pages branch (except the .git folder)
+          git rm -rf .
+          
+          # Copy the contents of the public folder to the gh-pages branch
+          cp -a public/. .
+          
+          # Commit and push the changes to gh-pages
+          git add .
+          git commit -m "Deploy Hugo site to GitHub Pages"
+          git push origin gh-pages --force
+          
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
