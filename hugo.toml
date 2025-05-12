@@ -2,3 +2,8 @@ baseURL = 'https://www.aravind-kumar.net/fokker-statistics/'
 languageCode = 'en-us'
 title = 'Fokker Statistics'
 theme = 'congo'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+    
