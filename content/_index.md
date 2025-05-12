@@ -5,7 +5,7 @@ draft: false
 Description: "Statistics from the Gameworld Fokker in AirlineSim"
 ---
 
-This website shows the weekly statistics from the Private Gameworld Fokker from AirlineSim. [AirlineSim](https://www.airlinesim.aero/en) is a realistic airline simulation game that includes various aspects of flight planning such as fleet management, route evaluation and scheduling and maintaining connections at key hubs - all supported by real-world demand and real-time simulation. Fokker is a private server that hosts AirlineSim, visit us [here](https://www.fokker.airlinesim.aero/en).
+This website shows the weekly statistics from the Private Gameworld Fokker from AirlineSim. [AirlineSim](https://www.airlinesim.aero/en) is a realistic airline simulation game that includes various aspects of flight planning such as fleet management, route evaluation and scheduling and maintaining connections at key hubs - all supported by real-world demand and real-time simulation. Fokker is a private server that hosts AirlineSim, visit us [here](https://www.fokker.airlinesim.aero).
 
 ## Visualization of last week's statistics
 
