@@ -15,7 +15,7 @@
   {{ $algorithm := .Site.Params.fingerprintAlgorithm | default "sha256" }}
   {{ $jsAppearance := resources.Get "js/appearance.js" }}
   {{ $jsAppearance = $jsAppearance | resources.Minify | resources.Fingerprint $algorithm }}
-  <script src="/js/sorttable.js"></script>
+  <script src="/fokker-statistics/js/sorttable.js"></script>
   <script
     type="text/javascript"
     src="{{ $jsAppearance.RelPermalink }}"
