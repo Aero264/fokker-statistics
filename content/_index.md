@@ -10,7 +10,7 @@ This website shows the weekly statistics from the Private Gameworld Fokker from 
 ## Visualization of last week's statistics
 
 ### Available seat kilometres (ASKM) vs Passengers carried
-![Bubble Plot of ASKM vs Passengers carried](/images/askm_v_pax.png)
+![Bubble Plot of ASKM vs Passengers carried](/fokker-statistics/images/askm_v_pax.png)
 ASKM is the number of seats offered per flight multiplied by the flight distance and summed up over all flights. Your revenue depends on both the number of passengers transported and how far you have transported them. As such, ASKM is a better indicator of revenue compared to passengers carried.
 
 The above plot of ASKM vs Passengers carried helps ascertain the average stage length of different airlines. For example, US based airlines have higher ASKM than their European counterparts as the average intra-european flight is much shorter than its US counterpart. Airlines make money when their planes are in the air. Hence, a plane deployed on a long-haul flight would make more money than a similar plane deployed on multiple short haul flights due to the impact of ground handling, with all other factors such as loads and profit margins being equal.
@@ -18,7 +18,7 @@ The above plot of ASKM vs Passengers carried helps ascertain the average stage l
 Note that the number of flights includes both passenger and cargo-only flights. Hence, ASKM is plotted against passengers carried (instead of the number of flights) for an unbiased picture of stage length. 
 
 ### Available freight kilometres (AFKM) vs Cargo carried
-![Bubble Plot of AFKM vs Cargo carried](/images/afkm_v_cargo.png)
+![Bubble Plot of AFKM vs Cargo carried](/fokker-statistics/images/afkm_v_cargo.png)
 AFKM is the cargo equivalent of ASKM and the same logic applies here.
 
 ### Statistics
