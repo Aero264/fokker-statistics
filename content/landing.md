@@ -5,7 +5,7 @@ draft: false
 Description: "Gameworld Fokker in AirlineSim"
 ---
 
-Fokker is the longest running private server that hosts AirlineSim, visit us [here](https://fokker.airlinesim.aero/action/portal/index). 
+[Fokker](https://fokker.airlinesim.aero/action/portal/index) is the longest running private server that hosts AirlineSim. 
 
 [AirlineSim](https://www.airlinesim.aero/en) is a realistic airline simulation game that includes various aspects of flight planning such as fleet management, route evaluation and scheduling and maintaining connections at key hubs - all supported by real-world demand and real-time simulation.
 
@@ -30,6 +30,6 @@ The **server configurations** are as follows:
 1. Customized aircraft prices to improve profitability of 757, 777, etc. 
 1. Legacy aircraft such as B727, MD-90, Fokker, etc. available.
 
-If you would like to join, visit us [here](https://discord.gg/4CGqYdFFN9). 
+If you would like to join, visit us [here](https://discord.gg/4CGqYdFFN9). If you are new to AirlineSim and not familiar with the above, join the server and drop me a message. We are a friendly group of players who help new players orient to the game. In fact, one such new player learnt the game with us and went on to develop on aircraft performance enhancement for AirlineSim.
 
 And if you would like to follow my airlines, look out for Continental Airlines (Chicago O'Hare), DragonAir (Shanghai Pu Dong), and EuroAtlantic Airways (Budapest Ferenc Liszt) in the stats page [here](https://www.aravind-kumar.net/fokker-statistics/).
