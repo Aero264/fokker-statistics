@@ -30,6 +30,6 @@ The **server configurations** are as follows:
 1. Customized aircraft prices to improve profitability of 757, 777, etc. 
 1. Legacy aircraft such as B727, MD-90, Fokker, etc. available.
 
-If you would like to join, visit us [here](https://discord.gg/4CGqYdFFN9). If you are new to AirlineSim and not familiar with the above, join the server and drop me a message. We are a friendly group of players who help new players orient to the game. In fact, one such new player learnt the game with us and went on to develop on aircraft performance enhancement for AirlineSim.
+If you would like to join, visit us [here](https://discord.gg/4CGqYdFFN9). If you are new to AirlineSim and not familiar with the above, join the server and drop me a message. We are a friendly group of players who help new players orient to the game. In fact, one such new player learnt the game with us and went on to develop aircraft performance enhancement suite for AirlineSim.
 
 And if you would like to follow my airlines, look out for Continental Airlines (Chicago O'Hare), DragonAir (Shanghai Pu Dong), and EuroAtlantic Airways (Budapest Ferenc Liszt) in the stats page [here](https://www.aravind-kumar.net/fokker-statistics/).
