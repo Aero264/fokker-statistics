@@ -19,7 +19,7 @@ Note that the number of flights includes both passenger and cargo-only flights. 
 
 ### Available freight kilometres (AFKM) vs Cargo carried
 ![Bubble Plot of AFKM vs Cargo carried](/fokker-statistics/images/afkm_v_cargo.png)
-AFKM is the cargo equivalent of ASKM and the same logic applies here.
+AFKM is the cargo equivalent of ASKM and the same logic applies here. Note that the cargo stats are plotted in a log scale as pure cargo airlines carry very high amounts of cargo compared to passenger airlines and a log scale helps in visualising this more clearly.
 
 ### Statistics
 Here are the statistics from last week presented in a sortable format. Just click on the column header to sort:
