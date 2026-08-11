@@ -1,6 +1,6 @@
 ---
 title: "Hi! Welcome to Fokker!"
-date: 2025-05-11T13:04:50+01:00
+date: 2026-08-11T13:04:50+01:00
 draft: false
 Description: "Gameworld Fokker in AirlineSim"
 ---
@@ -11,7 +11,7 @@ Description: "Gameworld Fokker in AirlineSim"
 
 People who know me know I love aviation. And not often one comes across a niche game like AirlineSim that is super realistic. I started playing when I was a student, and since 2019, I have been hosting this private server with like-minded folks from around the world. Around ten of us have been playing together for eight years now, with others joining and leaving with every iteration.
 
-We restarted the gameworld recently and Fokker is now in its sixth iteration. We currently have 21 players and two more spots left. We are the only gameworld with a dedicated website including an extended statistics and ranking [page](https://www.aravind-kumar.net/fokker-statistics/), which lists additional metrics such as ASKM, AFKM, etc. I have coded this site to scrape airline stats off the server every week and post extended rankings. 
+We restarted the gameworld recently and Fokker is now in its sixth iteration. **We are currently full.** We are the only gameworld with a dedicated website including an extended statistics and ranking [page](https://www.aravind-kumar.net/fokker-statistics/), which lists additional metrics such as ASKM, AFKM, etc. I have coded this site to scrape airline stats off the server every week and post extended rankings. 
 
 Apart from that, the **server-specific rules** are: 
 1. **Three holdings per player:** A and B in any country. C in a country whose biggest airport is 8 bar or smaller.
